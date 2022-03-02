@@ -14,6 +14,4 @@ const createUser = async (req: Request, res: Response<TOKEN>) => {
   res.status(201).send(user);
 };
 
-export default {
-  createUser,
-};
+export default createUser;
