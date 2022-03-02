@@ -11,7 +11,7 @@ const createUser = async (req: Request, res: Response<TOKEN>) => {
 
   const user = await Users.createUser({ username, classe, level, password });
 
-  res.status(201).send(user);
+  res.status(201).json(user);
 };
 
 export default createUser;
