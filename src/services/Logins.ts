@@ -1,5 +1,5 @@
 import { Login } from '../interfaces/LoginInterface';
-import Logins from '../models/Login';
+import Logins from '../models/Logins';
 
 const checkLogin = async (data: Login) => {
   const { username, password } = data;
@@ -8,4 +8,6 @@ const checkLogin = async (data: Login) => {
   return verifiedCredentials;
 };
 
-export default checkLogin;
+export default {
+  checkLogin,
+};
