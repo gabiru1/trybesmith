@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import Products from '../services/Products';
+import { createProductService, getAllProductsService } from '../services/Products';
 
 dotenv.config();
 
@@ -16,7 +16,7 @@ const createProduct = async (req: Request, res: Response) => {
   
     jwt.verify(authorization, SECRET);
   
-    const id = await Products.createProduct({ name, amount });
+    const id = await createProductService({ name, amount });
 
     const product = {
       item: {
@@ -32,6 +32,23 @@ const createProduct = async (req: Request, res: Response) => {
   }
 };
 
-export default {
+const getAllProducts = async (req: Request, res: Response) => {
+  try {
+    const { authorization } = req.headers;
+  
+    if (!authorization) return res.status(401).json({ error: 'Token not found' });
+  
+    jwt.verify(authorization, SECRET);
+  
+    const allProducts = await getAllProductsService();
+
+    return res.status(200).json(allProducts);
+  } catch (error) {
+    return res.status(401).json({ error: 'Invalid token' });
+  }
+};
+
+export {
   createProduct,
+  getAllProducts,
 };

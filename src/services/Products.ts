@@ -1,12 +1,19 @@
 import NewProduct from '../interfaces/ProductsInterface';
-import Products from '../models/Products';
+import { createProduct, getAllProducts } from '../models/Products';
 
-const createProduct = async ({ name, amount }: NewProduct) => {
-  const newProduct = await Products.createProduct({ name, amount });
+const createProductService = async ({ name, amount }: NewProduct) => {
+  const newProduct = await createProduct({ name, amount });
   
   return newProduct;
 };
 
-export default {
-  createProduct,
+const getAllProductsService = async () => {
+  const allProducts = await getAllProducts();
+  
+  return allProducts;
+};
+
+export {
+  createProductService,
+  getAllProductsService,
 };

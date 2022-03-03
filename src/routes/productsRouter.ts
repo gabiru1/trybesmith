@@ -1,10 +1,12 @@
 import { Router } from 'express';
-import Products from '../controllers/Products';
-import isValidProductName from '../middlewares/isValidProductName';
+import { createProduct, getAllProducts } from '../controllers/Products';
 import isValidAmount from '../middlewares/isValidAmount';
+import isValidProductName from '../middlewares/isValidProductName';
 
 const productsRouter = Router();
 
-productsRouter.post('/products', isValidProductName, isValidAmount, Products.createProduct);
+productsRouter.post('/products', isValidProductName, isValidAmount, createProduct);
+
+productsRouter.get('/products', getAllProducts);
 
 export default productsRouter;
