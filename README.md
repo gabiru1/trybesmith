@@ -1,15 +1,3 @@
-### Termos e acordos
-
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
-
-# Boas vindas ao repositório do projeto Trybesmith!
-
-Você já usa o _GitHub_ diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Tenha atenção a cada passo, e se tiver qualquer dúvida, nos envie por Slack! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
----
-
 # Sumário
 
 - [Boas vindas ao repositório do projeto Trybesmith!](#boas-vindas-ao-repositório-do-projeto-trybesmith)
@@ -56,14 +44,6 @@ Neste projeto, você será capaz de:
 
 ---
 
-# Entregáveis
-
-Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
-
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
-
----
-
 ## O que deverá ser desenvolvido
 
 Para este projeto, você vai desenvolver um **CRUD** (_Create, Read, Update_ e _Delete_) de itens medievais, no formato de uma _API_, utilizando _Typescript_.
@@ -81,14 +61,6 @@ O código para cadastro de pessoas usuárias deve ser criado por você utilizand
 ⚠️ **Dicas Importantes** ⚠️:
 
 - Não haverá front-end neste projeto, portanto não se preocupe com a visualização, apenas com as funcionalidades e organização do código.
-
-- Sua API deve ser desenvolvida dentro da pasta `./src`;
-
----
-
-## Data de Entrega
-  - Serão `2` dias de projeto.
-  - Data de entrega para avaliação final do projeto: `04/03/2022 14:00`.
 
 ---
 
@@ -163,13 +135,6 @@ O código para cadastro de pessoas usuárias deve ser criado por você utilizand
 # Como desenvolver
 
 **⚠️ Leia-os atentamente e siga à risca o que for pedido. ⚠️**
-
-**👀 Observações importantes:**
-
- - O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação;
- - O projeto deve rodar na porta **3000**;
- - O arquivo `index.ts` existe para rodar corretamente os testes. Todo o projeto (incluindo as rotas) deverá ser feito dentro do arquivo `app.ts`;
- - Você pode utilizar as funções `json.parse` e `json.stringify` nos models;
 
 ##  Todos os seus endpoints devem estar no padrão REST
 

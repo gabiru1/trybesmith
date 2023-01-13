@@ -6,12 +6,14 @@ const checkLogin = async ({ username, password }: Login): Promise<NewLogin> => {
     'SELECT * FROM Trybesmith.Users WHERE username = ? AND password = ?',
     [username, password],
   );
-    
+
   const [login] = result as NewLogin[];
-  
+
+  console.log(result); // para mostrar o motivo da desestruturação de array
+
   return login;
 };
 
 export default {
   checkLogin,
-}; 
+};
